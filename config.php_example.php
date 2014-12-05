@@ -36,3 +36,9 @@ $communities = array(
  * something like: $mapboxMapId = 'username.project_id';
  */
 $mapboxMapId = '';
+
+/*
+ * this will be used for some css and js
+ * don't forget to add a slash
+ */
+$localNetmon = 'https://netmon.freifunk-emskirchen.de/';
