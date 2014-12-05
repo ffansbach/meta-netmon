@@ -15,11 +15,11 @@ var icons;
  */
 function init()
 {
-	map = L.map('map').setView([49.447733, 10.767502], 10);
+	map = L.map('map').setView([mapInitalView.latitude, mapInitalView.longitude], mapInitalView.zoom);
 
-	L.tileLayer('http://{s}.tiles.mapbox.com/v3/'+mapboxMapId+'/{z}/{x}/{y}.png',
+	L.tileLayer(tileServerUrl,
 	{
-	    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+	    attribution: tileServerAttribution,
 	    maxZoom: 18
 	}).addTo(map);
 

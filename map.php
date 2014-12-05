@@ -82,9 +82,9 @@ foreach($communities AS $communityKey => $community)
 		<script>
 			var allTheRouters = <?php echo json_encode($routerList);?>;
 			var communities = <?php echo json_encode($communities);?>;
-			var mapboxMapId = <?php echo json_encode($mapboxMapId);?>;
-
-			if(mapboxMapId == '') alert("Mapbox-ProjectID fehlt.\n\nDas wird so nicht funktionieren.\nSiehe config.php");
+			var tileServerUrl = <?php echo json_encode($tileServerUrl);?>;
+			var tileServerAttribution = <?php echo json_encode($tileServerAttribution);?>;
+			var mapInitalView = <?php echo json_encode($mapInitalView);?>;
 
 			$(function() {
 				// initialize cluster, add points

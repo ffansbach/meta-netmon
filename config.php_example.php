@@ -28,14 +28,15 @@ $communities = array(
 	)
 );
 
-/*
- * register at https://www.mapbox.com/projects/
- * create a project and configure as pleased,
- * then set project id here
- *
- * something like: $mapboxMapId = 'username.project_id';
- */
-$mapboxMapId = '';
+// want another style? check http://leaflet-extras.github.io/leaflet-providers/preview/
+$tileServerUrl = 'http://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png';
+$tileServerAttribution = '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>';
+
+$mapInitalView = array(
+	'lat' => 49.447733,
+	'long' => 10.767502,
+	'zoom' => 10,
+);
 
 /*
  * this will be used for some css and js
