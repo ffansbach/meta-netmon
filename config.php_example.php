@@ -33,8 +33,8 @@ $tileServerUrl = 'http://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png';
 $tileServerAttribution = '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>';
 
 $mapInitalView = array(
-	'lat' => 49.447733,
-	'long' => 10.767502,
+	'latitude' => 49.447733,
+	'longitude' => 10.767502,
 	'zoom' => 10,
 );
 
