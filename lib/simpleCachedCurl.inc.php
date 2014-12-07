@@ -29,7 +29,7 @@ function simpleCachedCurl($url,$expires,$debug=false){
         echo "simpleCachedCurl debug:<br>";
     }
     $hash = md5($url);
-    $filename = dirname(__FILE__).'/cache/' . $hash . '.cache';
+    $filename = dirname(__FILE__).'/../cache/' . $hash . '.cache';
     $changed = file_exists($filename) ? filemtime($filename) : 0;
     $now = time();
     $diff = $now - $changed;   
@@ -65,7 +65,7 @@ function simpleCachedCurl($url,$expires,$debug=false){
         $cache = fopen($filename, 'wb');
         $write = fwrite($cache, serialize($rawData));
         if($debug && !$write){
-            echo "writing to $filename failed. Make the folder '".dirname(__FILE__).'/cache/'."' is writeable (chmod 777)<br>";
+            echo "writing to $filename failed. Make the folder '".dirname(__FILE__).'/../cache/'."' is writeable (chmod 777)<br>";
         }
         fclose($cache);
         return $rawData;
@@ -76,4 +76,3 @@ function simpleCachedCurl($url,$expires,$debug=false){
     $cache = unserialize(file_get_contents($filename));
     return $cache;
 }
-?>
